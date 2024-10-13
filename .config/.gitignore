@@ -1,0 +1,13 @@
+VirtualBox/
+libvirt
+gnome-boxes
+xfce4/
+user-*
+keypassxc/
+Thunar/accels.scm
+pavucontrol.ini
+ibus/
+signond/
+htop/
+trashrc
+pulse/
