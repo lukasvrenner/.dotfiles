@@ -5,17 +5,16 @@ if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
 
+. "$HOME/.cargo/env"
+
 #############################
 #   ENVIRONMENT VARIABLES   #
 #############################
 
-# text editor
 export EDITOR=nvim
 export VISUAL=nvim
 
-# nnn file manager
 export NNN_TRASH=1 # 1=trash-cli; 2=gio trash
 export NNN_OPTS="AedH"
 
-# User specific environment and startup programs
-. "$HOME/.cargo/env"
+export PKG_CONFIG_PATH=~/.pkg-config/:$PKG_CONFIG_PATH
