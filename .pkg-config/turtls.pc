@@ -1,4 +1,4 @@
-prefix=~/projects/turtls/
+prefix=/home/lrenner/projects/turtls
 includedir=${prefix}/include
 libdir=${prefix}/target/debug
 
