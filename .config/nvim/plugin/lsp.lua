@@ -23,22 +23,11 @@ cmp.setup({
     }),
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
-      { name = 'luasnip' }, -- For vsnip users.
-      -- { name = 'luasnip' }, -- For luasnip users.
-      -- { name = 'ultisnips' }, -- For ultisnips users.
-      -- { name = 'snippy' }, -- For snippy users.
+      { name = 'luasnip' },
     }, {
       { name = 'buffer' },
       { name = 'path'}
     })
-  })
-
-  -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
-  cmp.setup.cmdline({ '/', '?' }, {
-    mapping = cmp.mapping.preset.cmdline(),
-    sources = {
-      { name = 'buffer' }
-    }
   })
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -51,9 +40,9 @@ lspconfig.rust_analyzer.setup {
   capabilities = capabilities,
   cmd = {"rustup", "run", "stable", "rust-analyzer" }
 }
--- lspconfig.rust_analyzer.setup {
---     capabilities = capabilities,
--- }
+lspconfig.rust_analyzer.setup {
+    capabilities = capabilities,
+}
 lspconfig.clangd.setup {
     capabilities = capabilities,
 }
@@ -85,7 +74,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     local opts = { buffer = ev.buf }
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts) -- goes to declaration
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts) -- goes to definition
-    vim.keymap.set('n', '<leader>N', vim.lsp.buf.hover, opts) -- displays variable/function info
+    vim.keymap.set('n', '<leader>h', vim.lsp.buf.hover, opts) -- displays variable/function info
     -- vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
     vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
     vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, opts)
