@@ -1,16 +1,14 @@
 [Default Applications]
-x-scheme-handler/http=chromium-browser.desktop
-text/html=chromium-browser.desktop
+x-scheme-handler/http=firefox.desktop
+text/html=firefox.desktop
 application/xhtml+xml=firefox.desktop
-x-scheme-handler/https=chromium-browser.desktop
+x-scheme-handler/https=firefox.desktop
 x-content/video-dvd=org.videolan.VLC-opendvd.desktop
 application/octet-stream=org.videolan.VLC.desktop
 audio/x-wav=org.videolan.VLC.desktop
 text/x-python=nvim.desktop
 text/plain=nvim.desktop
 inode/directory=org.videolan.VLC-opendvd.desktop
-x-scheme-handler/about=chromium-browser.desktop
-x-scheme-handler/unknown=chromium-browser.desktop
 
 [Added Associations]
 x-scheme-handler/http=org.gnome.Epiphany.desktop;firefox.desktop;
