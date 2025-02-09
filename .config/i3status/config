@@ -7,27 +7,23 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-        colors = false
-        interval = 10
-        output_format = i3bar
-        color_good = "#50fa7b"
-        color_bad = "#ff5555"
-        # separator = "|"
-        # color_separator = "#282a36"
+    colors = false
+    interval = 10
+    output_format = i3bar
+    color_good = "#50fa7b"
+    color_bad = "#ff5555"
 }
 
-# order += "ipv6"
 order += "wireless _first_"
 order += "ethernet _first_"
 order += "battery all"
-# order += "disk /"
 # order += "load"
 # order += "memory"
 order += "tztime local"
 
 wireless _first_ {
     format_up = "W: (%essid%quality) %ip"
-    format_down = "W: down"
+    format_down = ""
 }
 
 ethernet _first_ {
@@ -45,10 +41,6 @@ battery all {
     path = "/sys/class/power_supply/BAT%d/uevent"
     low_threshold = 10
 }
-#
-# disk "/" {
-#         format = "%used/%total"
-# }
 
 # load {
 #         format = "%1min"
