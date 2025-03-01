@@ -43,10 +43,6 @@ lspconfig.rust_analyzer.setup {
 lspconfig.rust_analyzer.setup {
     capabilities = capabilities,
 }
-lspconfig.clangd.setup {
-    capabilities = capabilities,
-}
--- lspconfig.lua_ls.setup {}
 
 
 -- LSP SETUP

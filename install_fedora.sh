@@ -23,7 +23,6 @@ cargo component add rust-analyzer # LSP
 
 # C compiler
 install+='gcc '
-install+='clang-tools-extra ' # provides clangd and clang-format
 
 install+='neovim'
 git clone --depth=1 https://github.com/savq/paq-nvim.git \
