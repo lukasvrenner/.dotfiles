@@ -210,7 +210,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
 
 # Start launcher
-bindsym $mod+o exec $menu
+bindsym $mod+d exec $menu
 
 bindsym $mod+Shift+e exec swaylock & systemctl suspend
 
