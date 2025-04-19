@@ -21,7 +21,21 @@ vim.o.updatetime = 250
 vim.o.hlsearch = false
 vim.o.incsearch = true
 
-vim.o.scrolloff = 5 -- starts scrolling ten lines before bottom or top
+vim.o.scrolloff = 4 -- starts scrolling ten lines before bottom or top
 vim.o.swapfile = false
 vim.termguicolors = true -- 256 color support
 vim.cmd[[colorscheme gruvbox]]
+
+vim.lsp.enable({ 'rust-analyzer' })
+
+vim.api.nvim_create_autocmd('LspAttach', {
+    callback = function(ev)
+        vim.cmd[[set completeopt+=menuone,noselect,popup]]
+        local client = vim.lsp.get_client_by_id(ev.data.client_id)
+        if client:supports_method('textDocument/completion') then
+            vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
+        end
+        vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts) -- goes to declaration
+        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts) -- goes to definition
+    end,
+})

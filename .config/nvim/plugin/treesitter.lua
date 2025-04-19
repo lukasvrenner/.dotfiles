@@ -4,10 +4,7 @@ require('nvim-treesitter.configs').setup {
         enable = true,
         additional_vim_regex_highlighting = false,
     },
-    -- indent = {
-    --     enable = true
-    -- }
+    indent = {
+        enable = true
+    }
 }
-
--- -- unrelated to treesitter
--- require("nvim-autopairs").setup()
