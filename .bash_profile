@@ -9,7 +9,7 @@ fi
 #   ENVIRONMENT VARIABLES   #
 #############################
 
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=vi
+export VISUAL=vi
 
 export PKG_CONFIG_PATH=~/.pkg-config:$PKG_CONFIG_PATH

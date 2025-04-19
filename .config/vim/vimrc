@@ -1,0 +1,19 @@
+set laststatus=2 " enable status line
+
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set smarttab
+set expandtab
+set autoindent
+set nohlsearch
+set incsearch
+
+colorscheme gruvbox
+set background=dark
+set termguicolors
+
+packadd! comment
+packadd! editorconfig
+
+filetype plugin on
