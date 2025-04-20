@@ -5,7 +5,9 @@ set tabstop=4
 set softtabstop=4
 set smarttab
 set expandtab
-set autoindent
+
+filetype indent on
+
 set nohlsearch
 set incsearch
 
@@ -16,4 +18,3 @@ set termguicolors
 packadd! comment
 packadd! editorconfig
 
-filetype plugin on
