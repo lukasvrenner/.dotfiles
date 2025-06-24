@@ -7,7 +7,7 @@ set softtabstop=4
 set smarttab
 set expandtab
 
-filetype indent on
+filetype plugin indent on
 
 set nohlsearch
 set incsearch
