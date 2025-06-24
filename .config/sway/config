@@ -212,7 +212,7 @@ bindsym $mod+Shift+q kill
 # Start launcher
 bindsym $mod+d exec $menu
 
-bindsym $mod+Shift+e exec swaylock & systemctl suspend
+bindsym $mod+Shift+e exec swaylock --daemonize && systemctl suspend
 
 # Reload the configuration file
 bindsym $mod+Shift+c reload
