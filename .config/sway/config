@@ -35,17 +35,8 @@ set $term foot
 # manually set colors because wmenu doesn't support hex
 set $menu wmenu-run -N 282828 -n ebdbb2 -S 458588 -f "source code pro 13"
 
-# lockscreen
-set $lock swaylock
-
 ### Idle configuration
-# exec swayidle -w \
-# timeout 300 '$lock' \
-# timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-# before-sleep '$lock'
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 100 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
+exec swayidle -w before-sleep 'swaylock -f'
 
 # do not start xwayland on startup
 xwayland disable
@@ -101,8 +92,8 @@ floating_modifier $mod normal
 
 # Screen Lock
 # enable or disable screen on lid-close/open
-bindswitch --locked lid:on output LVDS-1 disable
-bindswitch --locked lid:off output LVDS-1 enable
+bindswitch --reload --locked lid:on output LVDS-1 disable
+bindswitch --reload --locked lid:off output LVDS-1 enable
 
 ##############
 # Workspaces #
@@ -212,7 +203,7 @@ bindsym $mod+Shift+q kill
 # Start launcher
 bindsym $mod+d exec $menu
 
-bindsym $mod+Shift+e exec swaylock --daemonize && systemctl suspend
+bindsym $mod+Shift+e exec systemctl suspend
 
 # Reload the configuration file
 bindsym $mod+Shift+c reload
@@ -260,6 +251,8 @@ mode "new mark" {
     bindsym $mod+Shift+m mode "default"
 }
 
+bindsym $mod+Shift+m mode "new mark"
+
 mode "jump to mark" {
     bindsym 1 [con_mark="1"] focus; mode "default"
     bindsym 2 [con_mark="2"] focus; mode "default"
@@ -276,13 +269,7 @@ mode "jump to mark" {
     bindsym $mod+m mode "default"
 }
 
-bindsym $mod+Shift+m mode "new mark"
 bindsym $mod+m mode "jump to mark"
-
-# Restart
-bindsym $mod+Shift+r exec swaynag -t warning -m 'You pressed the restart shortcut. Do you really want to restart? This will shut down your computer.' -B 'Yes, restart' 'reboot'
-
-# # Volume controls:
 
 bindsym --locked {
     XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
