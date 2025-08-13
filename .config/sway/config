@@ -33,7 +33,7 @@ set $term foot
 # on the original that the command was run on.
 
 # manually set colors because wmenu doesn't support hex
-set $menu wmenu-run -N 282828 -n ebdbb2 -S 458588 -f "source code pro 13"
+set $menu wmenu-run -N 282828 -n ebdbb2 -S 458588 -f "dejavu sans mono 13"
 
 ### Idle configuration
 exec swayidle -w before-sleep 'swaylock -f'
@@ -153,7 +153,7 @@ workspace_auto_back_and_forth yes
 ###########
 # Windows #
 ###########
-font source code pro 10
+font dejavu sans mono 10
 
 default_border pixel 1
 

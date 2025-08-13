@@ -12,4 +12,6 @@ fi
 export EDITOR=vi
 export VISUAL=vi
 
+export GTK_THEME=Adwaita:dark
+
 export PKG_CONFIG_PATH=~/.pkg-config:$PKG_CONFIG_PATH

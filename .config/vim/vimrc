@@ -8,6 +8,7 @@ set smarttab
 set expandtab
 
 filetype plugin indent on
+syntax on
 
 set nohlsearch
 set incsearch
