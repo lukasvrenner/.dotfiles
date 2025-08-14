@@ -17,12 +17,14 @@ install+='gh ' # GitHub CLI
 install+='vim '
 install+='rustup '
 install+='imv '
-install+='mpv '
 install+='locate '
-install+='desktop-file-utils ' # usefull xdg mimeapp stuff
+install+='desktop-file-utils ' # creates a cache to make xdg-open fast
 install+='network-manager '
 install+='pipewire '
+install+='brightnessctl '
 
+sudo apt install  ${install[*]}
 
-sudo apt install --no-install-recommends ${install[*]}
+# don't install recommends to avoid installing yt-dlp and other deps
+sudo apt install --no-install-recommends mpv
 stow $(dirname $0)
