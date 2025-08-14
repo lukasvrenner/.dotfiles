@@ -20,6 +20,8 @@ install+='imv '
 install+='mpv '
 install+='locate '
 install+='desktop-file-utils ' # usefull xdg mimeapp stuff
+install+='network-manager '
+install+='pipewire '
 
 
 sudo apt install --no-install-recommends ${install[*]}
