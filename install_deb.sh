@@ -22,6 +22,9 @@ install+='desktop-file-utils ' # creates a cache to make xdg-open fast
 install+='network-manager '
 install+='pipewire '
 install+='brightnessctl '
+install+='slurp '
+install+='grim '
+install+='fonts-noto-color-emoji '
 
 sudo apt install  ${install[*]}
 
