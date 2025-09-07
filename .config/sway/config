@@ -19,6 +19,7 @@ set $right l
 
 # colors 
 set $bg #282828
+set $bg1 #3c3836
 set $fg #ebdbb2
 set $red #cc241d
 set $green #98971a
@@ -38,7 +39,6 @@ set $menu wmenu-run -N 282828 -n ebdbb2 -S 458588 -f "dejavu sans mono 13"
 ### Idle configuration
 exec swayidle -w before-sleep 'swaylock -f'
 
-# do not start xwayland on startup
 xwayland disable
 
 #########
@@ -141,12 +141,12 @@ workspace_auto_back_and_forth yes
 ###########
 font dejavu sans mono 10
 
-default_border pixel 1
+default_border normal 1
 
 # class                 border  backgr. text    indicator 
-client.focused          $bg     $green  $fg     $red
-client.focused_inactive $bg     #3c3836 $fg     $red
-client.unfocused        $bg     #3c3836 $fg     $red
+client.focused          $bg     $blue   $fg     $red
+client.focused_inactive $bg     $bg1    $fg     $red
+client.unfocused        $bg     $bg1    $fg     $red
 client.urgent           $bg     $red    $fg     $red
 
 # swaymsg -t get_tree
@@ -334,7 +334,7 @@ bar {
         active_workspace   $blue   $bg     $fg
         inactive_workspace $bg     $bg     $fg
 
-        binding_mode       #3c3836 #3c3836 #ebdbb2
+        binding_mode       $bg1    $bg1    $fg
         separator $purple
     }
 }
