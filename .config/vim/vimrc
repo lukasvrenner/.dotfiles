@@ -13,6 +13,8 @@ syntax on
 set nohlsearch
 set incsearch
 
+set title
+
 colorscheme gruvbox
 set background=dark
 set termguicolors
