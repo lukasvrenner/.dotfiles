@@ -19,7 +19,6 @@ install+='rustup '
 install+='imv '
 install+='locate '
 install+='desktop-file-utils ' # creates a cache to make xdg-open fast
-install+='network-manager '
 install+='pipewire '
 install+='brightnessctl '
 install+='slurp '
