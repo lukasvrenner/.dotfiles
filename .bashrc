@@ -65,7 +65,7 @@ unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
-xterm*|rxvt*)
+xterm*|rxvt*|foot)
     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
     ;;
 *)
@@ -79,9 +79,9 @@ if [ -x /usr/bin/dircolors ]; then
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
-    #alias grep='grep --color=auto'
-    #alias fgrep='fgrep --color=auto'
-    #alias egrep='egrep --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
 fi
 
 # colored GCC warnings and errors
@@ -91,23 +91,6 @@ fi
 #alias ll='ls -l'
 #alias la='ls -A'
 #alias l='ls -CF'
-
-
-# allows for Ctrl-Shift-N to open in current directiory
-osc7_cwd() {
-    local strlen=${#PWD}
-    local encoded=""
-    local pos c o
-    for (( pos=0; pos<strlen; pos++ )); do
-        c=${PWD:$pos:1}
-        case "$c" in
-            [-/:_.!\'\(\)~[:alnum:]] ) o="${c}" ;;
-            * ) printf -v o '%%%02X' "'${c}" ;;
-        esac
-        encoded+="${o}"
-    done
-    printf '\e]7;file://%s%s\e\\' "${HOSTNAME}" "${encoded}"
-}
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
