@@ -24,4 +24,4 @@ export VISUAL=vi
 
 export GTK_THEME=Adwaita:dark
 
-export PKG_CONFIG_PATH=$HOME/.pkg-config:$PKG_CONFIG_PATH
+export VERSION_CONTROL=none # don't let GNU Indent create backup files
