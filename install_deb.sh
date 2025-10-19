@@ -1,32 +1,30 @@
 #!/usr/bin/bash
 
 packages=(
-    sway
-    i3status
-    wmenu
-    foot
+    brightnessctl
     chromium
-    stow
+    desktop-file-utils # creates a cache to make xdg-open fast
+    fonts-noto-color-emoji
+    foot
     gcc
-    universal-ctags
-    meson
     gh
-    vim
-    rustup
+    grim
+    i3status
     imv
     locate
-    desktop-file-utils # creates a cache to make xdg-open fast
+    meson
+    mpv
     pipewire
-    brightnessctl
+    rustup
     slurp
-    grim
-    fonts-noto-color-emoji
+    stow
+    sway
+    universal-ctags
+    vim
+    wmenu
 )
 
-sudo apt install "${packages[@]}"
+sudo apt install --no-install-recommends "${packages[@]}"
 
-# don't install recommends to avoid installing yt-dlp and other deps
-sudo apt install --no-install-recommends mpv
-
-mkdir $HOME/.config
+mkdir -p $HOME/.config
 stow $(dirname $0)
