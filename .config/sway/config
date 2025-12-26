@@ -339,6 +339,8 @@ bar {
     }
 }
 
+include devices/*
+
 # empty trash ofter 30 days
 # -f prevents an issue that arose due to verification being required
 exec trash-empty 30 -f

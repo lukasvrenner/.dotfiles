@@ -12,16 +12,22 @@ packages=(
     i3status
     imv
     locate
+    make
     meson
     mpv
     pipewire
+    polkitd
+    rtkit
     rustup
     slurp
     stow
     sway
+    swaylock
+    trash-cli
     universal-ctags
     vim
     wmenu
+    wireplumber
 )
 
 sudo apt install --no-install-recommends "${packages[@]}"
