@@ -11,6 +11,7 @@ packages=(
     grim
     i3status
     imv
+    libc6-dev
     locate
     make
     meson
@@ -26,8 +27,8 @@ packages=(
     trash-cli
     universal-ctags
     vim
-    wmenu
     wireplumber
+    wmenu
 )
 
 sudo apt install --no-install-recommends "${packages[@]}"
