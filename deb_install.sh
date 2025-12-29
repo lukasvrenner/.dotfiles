@@ -4,9 +4,11 @@ packages=(
     brightnessctl
     chromium
     desktop-file-utils # creates a cache to make xdg-open fast
+    fonts-liberation
     fonts-noto-color-emoji
     foot
     gcc
+    gdb
     gh
     grim
     i3status
