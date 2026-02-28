@@ -33,10 +33,10 @@ ethernet _first_ {
 }
 
 battery all {
-    format = "BAT: %percentage %remaining(%status)"
+    format = "BAT: %percentage (%remaining) %status"
     format_down = ""
-    status_chr = "⚡BAT"
-    # status_bat = "BAT"
+    status_chr = "⚡"
+    status_bat = ""
     status_unk = "?UNK"
     status_full = "FULL"
     path = "/sys/class/power_supply/BAT%d/uevent"
