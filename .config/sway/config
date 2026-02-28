@@ -149,6 +149,8 @@ client.focused_inactive $bg     $bg1    $fg     $red
 client.unfocused        $bg     $bg1    $fg     $red
 client.urgent           $bg     $red    $fg     $red
 
+focus_on_window_activation focus
+
 # swaymsg -t get_tree
 for_window [app_id="xdg-desktop-portal-gtk"] floating enable
 
@@ -189,7 +191,7 @@ bindsym $mod+Shift+q kill
 # Start launcher
 bindsym $mod+d exec $menu
 
-bindsym $mod+Shift+e exec systemctl suspend
+bindsym --locked $mod+Shift+e exec systemctl suspend
 
 # Reload the configuration file
 bindsym $mod+Shift+c reload
